@@ -5,8 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
   <title>Netpark - Orçamento</title>
 </head>
 
@@ -18,7 +21,7 @@
   <div class="form-container">
     <section class="contact-form" aria-label="Form">
       <form class="form" action="">
-        <fieldset>
+        <fieldset id="fieldset-required">
           <legend>Campos obrigatórios</legend>
           <div>
             <label for="companyName">Razão social </label>
@@ -74,7 +77,7 @@
           </div>
           <div>
             <label for="ZipCode">CEP</label>
-            <input type="text" id="ZipCode" name="ZipCode" placeholder="Financial E-mail" required>
+            <input type="text" id="zipCode" name="zipCode" required>
           </div>
           <div>
             <label for="timeDayInitial">Início do evento</label>
@@ -88,8 +91,12 @@
             <label for="qtyGuest">Quantidade de convidados</label>
             <input type="number" id="qtyGuest" name="qtyGuest">
           </div required>
+          <div>
+            <label for="financialPhone">Dia do evento</label>
+            <input type="date" id="financialPhone" name="financialPhone" placeholder="Financial E-mail">
+          </div>
         </fieldset>
-        <fieldset>
+        <fieldset id="fildset-optional">
           <legend>Campos opcionais</legend>
           <div>
             <label for="payCompanyName">Razão social empresa pagadora </label>
@@ -113,20 +120,26 @@
           </div>
           <div>
             <label>Observações gerais</label>
-            <textarea row="16" style="width:26em" id="generalObservations" name="generalObservations"></textarea>
+            <textarea row="16" style="width:100%" id="generalObservations" name="generalObservations"></textarea>
           </div>
 
         </fieldset>
       </form>
     </section>
-    <button class="button"></button>
+    <button class="button">Submeter</button>
   </div>
   <script type="text/javascript" src="js/jquery.mask.js"></script>
+  <script type="text/javascript" src="http://js.nicedit.com/nicEdit-latest.js"></script>
+
   <script type="text/javascript">
     $(document).ready(function () {
       $('.cnpj').mask("99.999.999/9999-99")
       $('.phone').mask("(00) 00000-0000")
+      $('#zipCode').mask("00000-000")
     })
+  </script>
+  <script type="text/javascript">
+    bkLib.onDomLoaded(function () { nicEditors.allTextAreas() }); 
   </script>
 </body>
 

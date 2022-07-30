@@ -1,10 +1,70 @@
 *{
   margin: 0;
   padding: 0;
+
 }
 
-.form-container{
+body{
+  margin:20px auto;
+}
+.title{
+  margin-bottom: 20px;
+}
+.form{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+#fieldset-required{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: aqua;
+  gap: 20px;
+}
+
+#fieldset-optional{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form label{
+  display:block;
+  font: 600 1rem/1.5 'nunito', sans-serif;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="time"],
+.form input[type="date"],
+.form input[type="number"],
+.form textarea{
+  box-sizing: border-box;
+  font: 400 1rem/1.5;
+  padding: 12px;
+  border-radius: 4px;
+  width: 100%;
+  border: solid 1px;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form input[type="time"]:focus,
+.form input[type="date"]:focus,
+.form input[type="number"]:focus,
+.form textarea:focus{
+  outline:none;
+  background: #ffffff;
+  box-shadow: 0 0 0 1px #00FADE;
+}
+
+label::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 20px;
+  background: #00FADE;
+  position: absolute;
+ z-index: -1;
+ border-radius: 5px;
 }
