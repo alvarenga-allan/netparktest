@@ -2,3 +2,9 @@
   margin: 0;
   padding: 0;
 }
+
+.form-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: aqua;
+}
