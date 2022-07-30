@@ -14,74 +14,101 @@
   <div class="form-container">
     <section class="contact-form" aria-label="Form">
       <form class="form" action="">
-        <div>
-          <label for="companyName">Razão social </label>
-          <input type="text" id="companyName" name="companyName">
-        </div>
-        <div>
-          <label for="companyCnpj">CNPJ </label>
-          <input type="text" id="companyCnpj" name="companyCnpj" placeholder="00.000.000/0000-00" required>
-        </div>
-        <div>
-          <label for="businessName">Nome Fantasia</label>
-          <input type="text" id="businessName" name="businessName" required>
-        </div>
-        <div>
-          <label for="businessEmail">E-mail comercial </label>
-          <input type="email" id="businessEmail" name="businessEmail" placeholder="exemplo@mail.com" required>
-        </div>
-        <div>
-          <label for="businessPhone">Telefone comercial </label>
-          <input type="text" class="phone" id="businessPhone" name="businessPhone" placeholder="(00) 000000000" required>
-        </div>
-        <div>
-          <label for="financialName">Nome do financiador </label>
-          <input type="text" id="financialName" name="financialName" placeholder="Financial Name" required>
-        </div>
-        <div>
-          <label for="financialEmail">E-mail do financiador</label>
-          <input type="email" id="financialEmail" name="financialEmail" placeholder="example@mail.com" required>
-        </div>
-        <div>
-          <label for="financialPhone">Telefone do financiador</label>
-          <input type="text" class="phone" id="financialPhone" name="financialPhone" placeholder="(00) 000000000" required>
-        </div>
-        <div>
-          <label for="contract">Contrato</label>
-          <input type="text" id="contract" name="contract" placeholder="Número do contrato" required>
-        </div>
-        <div>
-          <label for="adress">Endereço</label>
-          <input type="text" id="adress" name="adress" placeholder="Logradouro" required>
-        </div>
-        <div>
-          <label for="adressNumber">Número</label>
-          <input type="text" id="adressNumber" name="adressNumber" required>
-        </div>
-        <div>
-          <label for="city">Cidade</label>
-          <input type="text" id="city" name="city" required>
-        </div>
-        <div>
-          <label for="country">País</label>
-          <input type="text" id="country" name="country" required>
-        </div>
-        <div>
-          <label for="ZipCode">CEP</label>
-          <input type="text" id="ZipCode" name="ZipCode" placeholder="Financial E-mail" required>
-        </div>
-        <div>
-          <label for="timeDayInitial">Início do evento</label>
-          <input type="time" id="timeDayInitial" name="timeDayInitial" placeholder="00:00" required>
-        </div>
-        <div>
-          <label for="timeDayFinal">Final do evento</label>
-          <input type="time" id="timeDayFinal" name="timeDayFinal" placeholder="00:00" required>
-        </div>
-        <div>
-          <label for="qtyGuest">Quantidade de convidados</label>
-          <input type="number" id="qtyGuest" name="qtyGuest">
-        </div required>
+        <fieldset>
+          <legend>Campos obrigatórios</legend>
+          <div>
+            <label for="companyName">Razão social </label>
+            <input type="text" id="companyName" name="companyName">
+          </div>
+          <div>
+            <label for="companyCnpj">CNPJ </label>
+            <input type="text" id="companyCnpj" name="companyCnpj" placeholder="00.000.000/0000-00" required>
+          </div>
+          <div>
+            <label for="businessName">Nome Fantasia</label>
+            <input type="text" id="businessName" name="businessName" required>
+          </div>
+          <div>
+            <label for="businessEmail">E-mail comercial </label>
+            <input type="email" id="businessEmail" name="businessEmail" placeholder="exemplo@mail.com" required>
+          </div>
+          <div>
+            <label for="businessPhone">Telefone comercial </label>
+            <input type="text" class="phone" id="businessPhone" name="businessPhone" placeholder="(00) 000000000" required>
+          </div>
+          <div>
+            <label for="financialName">Nome do financiador </label>
+            <input type="text" id="financialName" name="financialName" placeholder="Nome completo" required>
+          </div>
+          <div>
+            <label for="financialEmail">E-mail do financiador</label>
+            <input type="email" id="financialEmail" name="financialEmail" placeholder="example@mail.com" required>
+          </div>
+          <div>
+            <label for="financialPhone">Telefone do financiador</label>
+            <input type="text" class="phone" id="financialPhone" name="financialPhone" placeholder="(00) 000000000" required>
+          </div>
+          <div>
+            <label for="contract">Contrato</label>
+            <input type="text" id="contract" name="contract" placeholder="Número do contrato" required>
+          </div>
+          <div>
+            <label for="adress">Endereço</label>
+            <input type="text" id="adress" name="adress" placeholder="Logradouro" required>
+          </div>
+          <div>
+            <label for="adressNumber">Número</label>
+            <input type="text" id="adressNumber" name="adressNumber" required>
+          </div>
+          <div>
+            <label for="city">Cidade</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div>
+            <label for="country">País</label>
+            <input type="text" id="country" name="country" required>
+          </div>
+          <div>
+            <label for="ZipCode">CEP</label>
+            <input type="text" id="ZipCode" name="ZipCode" placeholder="Financial E-mail" required>
+          </div>
+          <div>
+            <label for="timeDayInitial">Início do evento</label>
+            <input type="time" id="timeDayInitial" name="timeDayInitial" placeholder="00:00" required>
+          </div>
+          <div>
+            <label for="timeDayFinal">Final do evento</label>
+            <input type="time" id="timeDayFinal" name="timeDayFinal" placeholder="00:00" required>
+          </div>
+          <div>
+            <label for="qtyGuest">Quantidade de convidados</label>
+            <input type="number" id="qtyGuest" name="qtyGuest">
+          </div required>
+        </fieldset>
+        <fieldset>
+          <legend>Campos opcionais</legend>
+          <div>
+            <label for="payCompanyName">Razão social empresa pagadora </label>
+            <input type="text" id="payCompanyName" name="payCompanyName">
+          </div>
+          <div>
+            <label for="payCompanyCnpj">CNPJ empresa pagadora</label>
+            <input type="text" id="payCompanyCnpj" name="payCompanyCnpj" placeholder="00.000.000/0000-00" required>
+          </div>
+          <div>
+            <label for="payEmail">E-mail comercial </label>
+            <input type="email" id="payEmail" name="payEmail" placeholder="exemplo@mail.com" required>
+          </div>
+          <div>
+            <label for="payContractName">Nome do pagador </label>
+            <input type="text" id="payContractName" name="payContractName" placeholder="Nome completo" required>
+          </div>
+          <div>
+            <label for="payContractEmail">E-mail do pagador</label>
+            <input type="email" id="payContractEmail" name="payContractEmail" placeholder="example@mail.com" required>
+          </div>
+
+        </fieldset>
       </form>
     </section>
   </div>
