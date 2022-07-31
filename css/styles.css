@@ -1,15 +1,17 @@
 *{
   margin: 0;
   padding: 0;
-
 }
 
 body{
  font-family: 'nunito', sans-serif;
+ background-color: #000D2B;
+ color:#ffffff;
 }
+
 .title{
   display:grid;
-  justify-content: start;
+  justify-content: center;
   margin: 20px;
   font-size: 1.5rem;
 }
@@ -20,10 +22,13 @@ body{
 
 .form{
   display: grid;
-  grid-template-columns: 1fr;
   gap: 20px;
   padding:80px;
   margin:20px
+}
+
+fieldset{
+  margin:10px;
 }
 
 #fieldset-required{
@@ -47,11 +52,7 @@ grid-column: span 2;
   font: 600 1rem/1.5;
 }
 
-.form input[type="text"],
-.form input[type="email"],
-.form input[type="time"],
-.form input[type="date"],
-.form input[type="number"],
+.form input,
 .form textarea{
   box-sizing: border-box;
   font: 400 1rem/1.5;
@@ -62,50 +63,47 @@ grid-column: span 2;
   border: solid 1px;
 }
 
-.form input[type="text"]:focus,
-.form input[type="email"]:focus,
-.form input[type="time"]:focus,
-.form input[type="date"]:focus,
-.form input[type="number"]:focus,
+.form input:focus,
 .form textarea:focus{
   outline:none;
   background: #ffffff;
   box-shadow: 0 0 0 1px #00FADE;
 }
 
-label::before {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 20px;
-  background: #00FADE;
-  position: absolute;
- z-index: -1;
- border-radius: 5px;
-}
 .button{
-  display:grid;
-  padding:12px;
+   padding:12px;
   border-radius: 4px;
   border: solid 1px;
   width:150px;
   text-transform: uppercase;
   background: #46C163;
   color: #ffffff;
-  justify-self: end;
+  justify-content: center;
   cursor:pointer;
 }
-@media(max-width: 400px){
-  #fieldset-optional{
+.button:hover{
+  background-color: #00FADE;
+}
+@media (max-width: 400px){
+  .form{
+    display: grid;
+    gap: 20px;
+    padding:10px;
+    margin:10px
+  }
+  #fieldset-required{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 20px;
   }
+  
 
   #fieldset-optional{
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
   }
-  
+  input, label{
+    font-size: 0.7rem;
+  }
 }
