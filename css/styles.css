@@ -5,20 +5,15 @@
 
 body{
  font-family: 'nunito', sans-serif;
- background-color: #000D2B;
- color:#ffffff;
-}
+ }
 
 .title{
   display:grid;
   justify-content: center;
   margin: 20px;
   font-size: 1.5rem;
+  color:#000D2B;
   
-}
-
-h1{
-  color: #00FADE
 }
 
 .form-container{
@@ -28,19 +23,22 @@ h1{
 .form{
   display: grid;
   gap: 20px;
-  padding:80px;
+  padding:20px 80px 20px;
   margin:20px
 }
 
 fieldset{
   margin:10px;
 }
-
+fieldset{
+  padding:10px;
+}
 #fieldset-required{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   border: none;
+  padding:10px;
 }
 
 .col-2{
@@ -73,11 +71,12 @@ grid-column: span 2;
 .form textarea:focus{
   outline:none;
   background: #ffffff;
-  box-shadow: 0 0 0 1px #00FADE;
+  box-shadow: 0 0 0 1px #000D2B;
 }
 
 .button{
    padding:12px;
+   margin:10px;
   border-radius: 4px;
   border: solid 1px;
   width:150px;
@@ -91,12 +90,24 @@ grid-column: span 2;
 .button:hover{
   background-color: #00FADE;
 }
-@media (max-width: 400px){
+label:before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 20px;
+  background: #00FADE;
+  position: absolute;
+  z-index:-1;
+  border-radius: 4px;
+
+}
+@media (max-width: 600px){
   .form{
     display: grid;
     gap: 20px;
     padding:10px;
-    margin:10px
+    margin:10px;
+    justify-content:center;
   }
   #fieldset-required{
     display: grid;
@@ -110,6 +121,7 @@ grid-column: span 2;
     grid-template-columns: 1fr;
     gap: 10px;
   }
+
   input, label{
     font-size: 0.7rem;
   }
