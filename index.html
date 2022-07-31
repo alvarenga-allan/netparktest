@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
@@ -29,24 +30,24 @@
             <legend>Empresa</legend>
             <div>
               <label for="companyName">Razão social </label>
-              <input type="text" id="companyName" name="companyName">
+              <input type="text" id="companyName" name="companyName" required>
 
             </div>
             <div>
               <label for="companyCnpj">CNPJ </label>
-              <input type="text" class="cnpj" id="companyCnpj" name="companyCnpj" placeholder="00.000.000/0000-00">
+              <input type="text" class="cnpj" id="companyCnpj" name="companyCnpj" placeholder="00.000.000/0000-00" required>
             </div>
             <div>
               <label for="businessName">Nome Fantasia</label>
-              <input type="text" id="businessName" name="businessName">
+              <input type="text" id="businessName" name="businessName" required>
             </div>
             <div>
               <label for="businessEmail">E-mail comercial </label>
-              <input type="email" id="businessEmail" name="businessEmail" placeholder="exemplo@mail.com">
+              <input type="email" id="businessEmail" name="businessEmail" placeholder="exemplo@mail.com" required>
             </div>
             <div>
               <label for="businessPhone">Telefone comercial </label>
-              <input type="text" class="phone" id="businessPhone" name="businessPhone" placeholder="(00) 000000000">
+              <input type="text" class="phone" id="businessPhone" name="businessPhone" placeholder="(00) 000000000" required>
             </div>
           </fieldset>
           <fieldset>
@@ -54,62 +55,62 @@
 
             <div>
               <label for="financialName">Nome do financiador </label>
-              <input type="text" id="financialName" name="financialName" placeholder="Nome completo">
+              <input type="text" id="financialName" name="financialName" placeholder="Nome completo" required>
             </div>
             <div>
               <label for="financialEmail">E-mail do financiador</label>
-              <input type="email" id="financialEmail" name="financialEmail" placeholder="exemplo@mail.com">
+              <input type="email" id="financialEmail" name="financialEmail" placeholder="exemplo@mail.com" required>
             </div>
             <div>
               <label for="financialPhone">Telefone do financiador</label>
-              <input type="text" class="phone" id="financialPhone" name="financialPhone" placeholder="(00) 000000000">
+              <input type="text" class="phone" id="financialPhone" name="financialPhone" placeholder="(00) 000000000" required>
             </div>
 
             <div>
               <label for="contract">Contrato</label>
-              <input type="text" id="contract" name="contract" placeholder="Número do contrato">
+              <input type="text" id="contract" name="contract" placeholder="Número do contrato" required>
             </div>
           </fieldset>
           <fieldset>
             <legend>Endereço</legend>
             <div>
               <label for="adress">Logradouro</label>
-              <input type="text" id="adress" name="adress" placeholder="Rua...">
+              <input type="text" id="adress" name="adress" placeholder="Rua..." required>
             </div>
             <div>
               <label for="adressNumber">Número</label>
-              <input type="text" id="adressNumber" name="adressNumber">
+              <input type="text" id="adressNumber" name="adressNumber" required>
             </div>
             <div>
               <label for="city">Cidade</label>
-              <input type="text" id="city" name="city">
+              <input type="text" id="city" name="city" required>
             </div>
             <div>
               <label for="country">País</label>
-              <input type="text" id="country" name="country">
+              <input type="text" id="country" name="country" required>
             </div>
             <div>
               <label for="ZipCode">CEP</label>
-              <input type="text" id="zipCode" name="zipCode">
+              <input type="text" id="zipCode" name="zipCode" required>
             </div>
           </fieldset>
           <fieldset>
             <legend>Detalhes do evento</legend>
             <div>
               <label for="timeDayInitial">Início do evento</label>
-              <input type="time" id="timeDayInitial" name="timeDayInitial" placeholder="00:00">
+              <input type="time" id="timeDayInitial" name="timeDayInitial" placeholder="00:00" required>
             </div>
             <div>
               <label for="timeDayFinal">Final do evento</label>
-              <input type="time" id="timeDayFinal" name="timeDayFinal" placeholder="00:00">
+              <input type="time" id="timeDayFinal" name="timeDayFinal" placeholder="00:00" required>
             </div>
             <div>
               <label for="qtyGuest">Quantidade de convidados</label>
-              <input type="number" id="qtyGuest" name="qtyGuest">
+              <input type="number" id="qtyGuest" name="qtyGuest" required>
             </div>
             <div>
               <label for="financialPhone">Dia do evento</label>
-              <input type="date" id="financialPhone" name="financialPhone" placeholder="Financial E-mail">
+              <input type="date" id="financialPhone" name="financialPhone" placeholder="Financial E-mail" required>
             </div>
           </fieldset>
         </fieldset>
@@ -162,6 +163,7 @@
   </script>
 
   <script src="./js/index.js"></script>
+  <script src="./js/validation.js"></script>
 </body>
 
 </html>

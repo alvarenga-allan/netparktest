@@ -54,6 +54,7 @@ grid-column: span 2;
 .form label{
   display:block;
   font: 600 1rem/1.5;
+  margin-top: 8px;
 }
 
 .form input,
@@ -61,7 +62,7 @@ grid-column: span 2;
   box-sizing: border-box;
   font: 400 1rem/1.5;
   padding: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
   border-radius: 4px;
   width: 100%;
   border: solid 1px;
@@ -90,16 +91,9 @@ grid-column: span 2;
 .button:hover{
   background-color: #00FADE;
 }
-label:before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 20px;
-  background: #00FADE;
-  position: absolute;
-  z-index:-1;
-  border-radius: 4px;
 
+.error{
+  color:red;
 }
 @media (max-width: 600px){
   .form{
