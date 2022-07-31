@@ -7,13 +7,14 @@
 body{
  font-family: 'nunito', sans-serif;
 }
+.title{
+  display:grid;
+  justify-content: start;
+  margin: 20px;
+}
 
 .form-container{
-  max-width: 1200px;
-  justify-content: center;
-}
-.title{
-  margin-bottom: 20px;
+  max-width: 1300px;
 }
 
 .form{
@@ -29,6 +30,7 @@ body{
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+
 .col-2{
 grid-column: span 2;
 }
@@ -79,4 +81,18 @@ label::before {
   position: absolute;
  z-index: -1;
  border-radius: 5px;
+}
+.button{
+  display:grid;
+  padding:12px;
+  border-radius: 4px;
+  border: solid 1px;
+  width:150px;
+  text-transform: uppercase;
+  background: #46C163;
+  color: #ffffff;
+  justify-self: end;
+  
+
+
 }
