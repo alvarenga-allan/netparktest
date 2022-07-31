@@ -9,8 +9,8 @@ body{
 }
 .title{
   display:grid;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: start;
+  margin: 20px;
 }
 
 .form-container{
