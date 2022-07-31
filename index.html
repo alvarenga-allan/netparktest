@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></script>
   <title>Netpark - Orçamento</title>
 </head>
 
@@ -20,14 +22,17 @@
   </div>
   <div class="form-container">
     <section class="contact-form" aria-label="Form">
-      <form class="form" action="">
+      <form class="form" action="/" method="post">
+        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+        <input type="hidden" name="action" value="validate_captcha">
         <fieldset id="fieldset-required">
           <legend>Campos obrigatórios</legend>
           <fieldset>
             <legend>Empresa</legend>
             <div>
               <label for="companyName">Razão social </label>
-              <input type="text" id="companyName" name="companyName">
+              <input type="text" id="g-recaptcha-response" name="companyName">
+
             </div>
             <div>
               <label for="companyCnpj">CNPJ </label>
@@ -136,7 +141,7 @@
             <label>Observações gerais</label>
             <textarea style="height: 100%" id="generalObservations" name="generalObservations"></textarea>
           </div>
-          <button class="button col-2" type="submit">Submeter</button>
+          <button class="button col-2 g-recaptcha" type="submit" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-callback='onSubmit' data-action='submit'>Submeter</button>
       </form>
 
       </fieldset>
@@ -157,6 +162,8 @@
   <script type="text/javascript">
     bkLib.onDomLoaded(function () { nicEditors.allTextAreas() }); 
   </script>
+
+  <script src="./js/index.js"></script>
 </body>
 
 </html>
