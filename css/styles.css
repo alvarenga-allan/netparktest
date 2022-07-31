@@ -11,6 +11,7 @@ body{
   display:grid;
   justify-content: start;
   margin: 20px;
+  font-size: 1.5rem;
 }
 
 .form-container{
@@ -106,11 +107,5 @@ label::before {
     grid-template-columns: 1fr;
     gap: 10px;
   }
-  .form{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding:20px;
-    margin:20px
-  }
+  
 }
