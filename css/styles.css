@@ -92,7 +92,19 @@ label::before {
   background: #46C163;
   color: #ffffff;
   justify-self: end;
+  cursor:pointer;
+}
+@media(max-width: 400px){
+  #fieldset-optional{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  #fieldset-optional{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
   
-
-
 }
